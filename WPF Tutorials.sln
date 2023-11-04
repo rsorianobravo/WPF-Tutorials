@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF Switch MVVM", "WPF Switch MVVM\WPF Switch MVVM.csproj", "{640F8B4B-A310-4A01-91BA-6B631CC4EC8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventCommands", "EventCommands\EventCommands.csproj", "{472D95EF-7146-46FF-9107-2EAD545BB3B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{640F8B4B-A310-4A01-91BA-6B631CC4EC8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{640F8B4B-A310-4A01-91BA-6B631CC4EC8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{640F8B4B-A310-4A01-91BA-6B631CC4EC8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472D95EF-7146-46FF-9107-2EAD545BB3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472D95EF-7146-46FF-9107-2EAD545BB3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472D95EF-7146-46FF-9107-2EAD545BB3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472D95EF-7146-46FF-9107-2EAD545BB3B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
