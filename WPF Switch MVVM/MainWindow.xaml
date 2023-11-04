@@ -15,8 +15,8 @@
         <ContentControl Content="{Binding SelectedViewModel}"/>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Margin="10" Width="200" Content="Home"/>
-            <Button Margin="10" Width="200" Content="Account"/>
+            <Button Margin="10" Width="200" Content="Home" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
+            <Button Margin="10" Width="200" Content="Account" Command="{Binding UpdateViewCommand}" CommandParameter="Account"/>
         </StackPanel>
     </Grid>
 </Window>
