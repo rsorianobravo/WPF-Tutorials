@@ -10,13 +10,22 @@ namespace WPF_Switch_MVVM.ViewModels
 {
     public class MainViewModel: BaseViewModel
     {
-        public BaseViewModel SelectedViewModel { get; set; }
+        private BaseViewModel selectedViewModel;
+        
+        public BaseViewModel SelectedViewModel 
+        { 
+            get { return selectedViewModel; } 
+            set 
+            {
+                selectedViewModel = value;
+                OnPropertyChanged(nameof(SelectedViewModel));
+            } 
+        }
 
         public ICommand UpdateViewCommand { get; set; }
 
         public MainViewModel()
         {
-            SelectedViewModel = new HomeViewModel();
             UpdateViewCommand = new UpdateViewCommand(this);
 
         }
