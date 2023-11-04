@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_Switch_MVVM.ViewModels
 {
-    public class BaseViewModel
+    internal class HomeViewModel : BaseViewModel
     {
-
     }
 }

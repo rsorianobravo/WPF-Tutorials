@@ -11,6 +11,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+
+        <ContentControl Content="{Binding SelectedViewModel}"/>
+
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Margin="10" Width="200" Content="Home"/>
             <Button Margin="10" Width="200" Content="Account"/>
