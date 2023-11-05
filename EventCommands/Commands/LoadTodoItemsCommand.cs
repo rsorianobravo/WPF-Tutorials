@@ -12,16 +12,16 @@ namespace EventCommands.Commands
 {
     public class LoadTodoItemsCommand : ICommand
     {
+        
         private readonly TodoListViewModel todoListViewModel;
+        public event EventHandler? CanExecuteChanged;
+
 
         public LoadTodoItemsCommand(TodoListViewModel todoListViewModel)
         {
             this.todoListViewModel = todoListViewModel;
         }
 
-
-
-        public event EventHandler? CanExecuteChanged;
 
         public bool CanExecute(object? parameter)
         {
@@ -39,7 +39,26 @@ namespace EventCommands.Commands
 
         private async Task<IEnumerable<TodoItems>> GetTodoItemsAsync()
         {
-
+            return await Task.FromResult(new[]
+            {
+                new TodoItems() {
+                    Description = "walk the dog",
+                    IsCompleted = false,
+                    OwnerName = "John"
+                },
+                new TodoItems()
+                {
+                    Description = "Take out the trash.",
+                    IsCompleted = false,
+                    OwnerName = "Mary"
+                },
+                new TodoItems()
+                {
+                    Description = "Upload YouTube video.",
+                    IsCompleted = true,
+                    OwnerName = "SingletonSean"
+                }
+            });
         }
     }
 }

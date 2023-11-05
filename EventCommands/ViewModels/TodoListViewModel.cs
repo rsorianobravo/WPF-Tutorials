@@ -23,10 +23,14 @@ namespace EventCommands.ViewModels
         }
 
         public ICommand LoadTodoItemsCommand { get; set; }
+        public ICommand SelectedTodoItemsChangedCommand { get; set; }
+
 
         public TodoListViewModel()
         {
             LoadTodoItemsCommand = new LoadTodoItemsCommand(this);
+            SelectedTodoItemsChangedCommand = new SelectedTodoItemsChangedCommand();
+
 
         }
     }
