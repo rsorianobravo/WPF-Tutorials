@@ -9,6 +9,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <views:TodoList DataContext ="{Binding TodoListViewModel}"
-                        LoadCommand="{Binding LoadTodoItemsCommand}"/>
+                        LoadCommand ="{Binding LoadTodoItemsCommand}"
+                        SelectedTodoItemsChangedCommand="{Binding} SelectedTodoItemsChangedCommand"/>
+
     </Grid>
 </Window>
