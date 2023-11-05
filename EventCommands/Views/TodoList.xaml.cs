@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventCommands.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,27 @@ namespace EventCommands.Views
     /// </summary>
     public partial class TodoList : UserControl
     {
+        
+        public ICommand LoadCommand
+        { 
+            get { return (ICommand)GetValue(LoadCommandProperty); }
+            set { SetValue(LoadCommandProperty, value); } 
+        }
+
+        public static readonly DependencyProperty LoadCommandProperty =
+            DependencyProperty.Register("LoadCommand", typeof(ICommand), typeof(TodoList), new PropertyMetadata(null));
+
         public TodoList()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, System.Windows.RoutedEvent e)
+        {
+            if(LoadCommand != null)
+            {
+                LoadCommand.Execute(null);
+            }
         }
     }
 }

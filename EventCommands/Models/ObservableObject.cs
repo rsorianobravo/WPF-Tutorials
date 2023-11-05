@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventCommands.Models
 {
-    internal class ObservableObject
+    public class ObservableObject
     {
     }
 }

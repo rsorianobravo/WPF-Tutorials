@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <views:TodoList DataContext ="{Binding TodoListViewModel}"/>
+        <views:TodoList DataContext ="{Binding TodoListViewModel}"
+                        LoadCommand="{Binding LoadTodoItemsCommand}"/>
     </Grid>
 </Window>
